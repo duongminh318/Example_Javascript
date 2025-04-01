@@ -283,21 +283,61 @@
 //     console.log("Món không có trong menu");
 // }
 
-var choice = parseInt(prompt("Nhập số món ăn bạn muốn chọn (1-4):"));
+// var choice = parseInt(prompt("Nhập số món ăn bạn muốn chọn (1-4):"));
 
-switch (choice) {
-  case 1:
-    alert("Bạn đã chọn Phở");
+// switch (choice) {
+//   case 1:
+//     alert("Bạn đã chọn Phở");
+//     break;
+//   case 2:
+//     alert("Bạn đã chọn Cơm tấm");
+//     break;
+//   case 3:
+//     alert("Bạn đã chọn Bún bò");
+//     break;
+//   case 4:
+//     alert("Bạn đã chọn Hủ tiếu");
+//     break;
+//   default:
+//     alert("Món không có trong menu");
+// }
+
+console.log("hello");
+
+//
+// Yêu cầu người dùng nhập vào số thứ nhất
+var number1 = parseFloat(prompt("Nhập số thứ nhất:"));
+
+
+// Yêu cầu người dùng nhập vào phép toán (+, -, *, /)
+var operator = prompt("Nhập phép toán (+, -, *, /):");
+
+// Yêu cầu người dùng nhập vào số thứ hai
+var number2 = parseFloat(prompt("Nhập số thứ hai:"));
+
+// Sử dụng câu lệnh switch để thực hiện phép toán
+var result;
+switch (operator) {
+  case "+":
+    // result = number1 + number2;
+    alert(number1 + number2);
     break;
-  case 2:
-    alert("Bạn đã chọn Cơm tấm");
+  case "-":
+    result = number1 - number2;
+    alert("Kết quả phép trừ: " + result);
     break;
-  case 3:
-    alert("Bạn đã chọn Bún bò");
+  case "*":
+    result = number1 * number2;
+    alert("Kết quả phép nhân: " + result);
     break;
-  case 4:
-    alert("Bạn đã chọn Hủ tiếu");
+  case "/":
+    if (number2 === 0) {
+      alert("Lỗi: Không thể chia cho 0");
+    } else {
+      result = number1 / number2;
+      alert("Kết quả phép chia: " + result);
+    }
     break;
   default:
-    alert("Món không có trong menu");
+    alert("Phép toán không hợp lệ.");
 }
