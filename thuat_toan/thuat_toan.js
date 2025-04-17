@@ -76,7 +76,7 @@
 //     break; // Thoát sớm
 //     }
 //    }
-   
+
 //    if (isDecreasing) {
 //     console.log("Mảng giảm dần.");
 //    } else {console.log("Mảng không giảm dần.");
@@ -114,5 +114,167 @@
 //     break;
 //  }
 // }
+
+// ex7
+// var numbers = [3, 7, 1, 9, 4];
+// var allPositive = true;
+// if (numbers.length === 0){
+//     console.log('mảng rỗng');
+
+// }else{
+//     for (var i = 0; i < numbers.length; i++) {
+//         if (numbers[i] <= 0) {
+//         allPositive = false;
+//         break;
+//     }
+// }
+
+// }
+// if (allPositive) {
+// console.log("Tất cả là số dương");
+// } else {
+// console.log("Có số không dương");
+// }
+
+// Tìm max
+// var numbers = [5, 10, 2, 8, 25, 15, 30, 2,45];
+// var maxValue = numbers[0]; //1. khởi tạo maxValue bằng phần tử đầu tiên index 0
+
+// for(var i=1; i< numbers.length; i++){
+//     if(numbers[i]> maxValue){
+//         maxValue= numbers[i];
+//     }
+// }
+// console.log(maxValue);
+
+// Min
+// var numbers = [5, 10, 2, 8, 25, 15, 30, 2, 45];
+// var minValue = numbers[0]; //1. khởi tạo maxValue bằng phần tử đầu tiên index 0
+
+// for(var i=1; i< numbers.length; i++){
+//     if(numbers[i]< minValue){
+//         minValue= numbers[i];
+//     }
+// }
+// console.log(minValue);
+
+// Object - tìm giá cao nhất
+// var products = [
+//     { name: "Áo thun", price: 50000 },
+//     { name: "Quần jeans", price: 150000 },
+//     { name: "Giày sneaker", price: 80000 }
+//    ];
+
+//    var maxPriceProduct = products[0]; // khởi tạo maxPriceProduct bằng object đầu tiên
+
+// for (var i = 1; i < products.length; i++) {
+//  if (products[i].price > maxPriceProduct.price) { // So sánh thuộc tính 'price'
+//  maxPriceProduct = products[i]; // Cập nhật maxPriceProduct bằng object hiện tại
+//  }
+// }
+
+// console.log("Sản phẩm có giá cao nhất:", maxPriceProduct); // In kết quả (object Quần jeans)
+// console.log("Giá cao nhất:", maxPriceProduct.price); // In giá cao nhất (150000)
+
+// ex9
+// var products = [
+//     { name: "Bút", price: 5000, quantity: 3 },
+//     { name: "Sách", price: 20000, quantity: 2 },
+//     { name: "Tẩy", price: 3000, quantity: 2 }
+// ];
+
+// if (products.length === 0) {
+//     console.log("Mảng rỗng");
+// } else {
+//     var minValueProduct = products[0];
+//     var minValue = minValueProduct.price * minValueProduct.quantity;
+//     for (var i = 1; i < products.length; i++) {
+//         var currentValue = products[i].price * products[i].quantity;
+//         if (currentValue < minValue) {
+//             minValue = currentValue;
+//             minValueProduct = products[i];
+//         }
+//     }
+//     console.log(minValueProduct);}
+
+//  So Sánh Phần Tử Hiện Tại và Phần Tử Sau
+// đếm số lần giảm giá
+// var prices = [100, 120, 90, 150, 160, 140];
+// var decreaseCount = 0; // Biến đếm số lần giá giảm
+// for (var i = 0; i < prices.length - 1; i++) { // Dừng trước phần tử cuối
+//     var currentPrice = prices[i]; // Giá hiện tại
+//     var nextPrice = prices[i + 1]; // Giá sau
+
+//     if (currentPrice > nextPrice) { // So sánh: hiện tại > sau
+//         decreaseCount++; // Tăng đếm nếu giá giảm
+//         console.log(`Giá giảm từ ${currentPrice} xuống ${nextPrice} tại vị trí index ${i}`);
+//         }
+// }
+// console.log("Tổng số lần giá giảm:", decreaseCount); // In kết quả (2)
+
+// var products = [
+//     { name: "SP1", price: 100 },
+//     { name: "SP2", price: 120 }, // Giá tăng
+//     { name: "SP3", price: 90 },
+//     { name: "SP4", price: 150 }, // Giá tăng
+//     { name: "SP5", price: 10 }
+// ];
+
+// var increaseCount = 0; // Biến đếm số lần giá tăng
+
+// for (var i = 0; i < products.length - 1; i++) {
+
+//     var currentProduct = products[i]; // Sản phẩm hiện tại
+//     var nextProduct = products[i + 1]; // Sản phẩm sau
+//     if (currentProduct.price < nextProduct.price) { // So sánh giá
+//         increaseCount++; // Tăng đếm nếu giá tăng
+//         console.log(`Giá tăng từ ${currentProduct.price} (${currentProduct.name}) lên ${nextProduct.price}
+//        (${nextProduct.name})`);
+//     }
+
+
+// } 
+// console.log("Tổng số lần giá tăng:", increaseCount); // In kết quả (2)
+
+
+// var age=17;
+// console.log(`tuổi là ${age}`);
+
+// var matrix = [
+//     [1, 2, 3, 6], // Hàng 0
+//     [4, 5, 6], // Hàng 1
+//     [7, 8, 9]  // Hàng 2
+// ];
+
+// console.log(matrix[0][0]); // 1
+// console.log(matrix[1][1]); // 5
+// console.log(matrix[2][2]); // 9
+
+// // Duyệt mảng bằng vòng lặp for lồng nhau
+// for (var i = 0; i < matrix.length; i++) {
+//     var row = matrix[i];
+//     console.log(`--- Hàng ${i} ---`);
+    
+//     for (var j = 0; j < row.length; j++) {
+//         var element = row[j]; // Sửa từ row[i] thành row[j]
+//         console.log(`Phần tử [${i}][${j}]: ${element}`);
+//     }
+// }
+
+var matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+var total = 0;
+for (var i = 0; i < matrix.length; i++) {
+    // var row = matrix[i];
+    for (var j = 0; j < matrix[i].length; j++) { // Sửa ở đây
+        total += matrix[i][j];
+    }
+}
+
+console.log(total);
 
 

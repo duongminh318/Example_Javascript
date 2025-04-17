@@ -17,3 +17,21 @@
   - if( kiểm tra điều kiện nào đó)
     + cập nhật lại biến cờ nếu thoả mãn điều kiện
  - xuất ra thông báo
+
+ 3. Tìm giá trị lớn nhất nhỏ nhất (Max, min)
+- khởi tạo biến maxValue = arr[0]
+  - chạy vòng lặp for để duyệt mảng hoặc object
+  - if( so sánh maxValue với arr[i])
+    + cập lại maxValue nếu arr[i]> maxValue
+ - xuất ra thông báo
+
+4. So Sánh Phần Tử Hiện Tại và Phần Tử Sau
+ - khởi tạo biến đếm
+ - chạy for
+ - gán currentValue cho arr[i]
+  + và nextValue cho currentValue[i+1]
+- so sánh current và next nếu thoả điều kiện thì tăng biến đếm
+- xuất ra kết quả của biến đếm
+
+5. Mảng lồng mảng (Nested Array)
+
