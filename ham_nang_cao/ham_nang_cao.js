@@ -151,22 +151,41 @@
 // chaoBan2(hoiSucKhoe)
 
 
-function tinhDienTichHCN(dai, rong, callback){
-    let ketQua= dai*rong;
-    callback(ketQua);
+// function tinhDienTichHCN(dai, rong, callback){
+//     let ketQua= dai*rong;
+//     callback(ketQua);
 
-}
+// }
 
-function thucHienPhepTinh(a, b, callback) {
-    let ketQua = a + b;
-    callback(ketQua); // Gọi callback function và truyền kết quả vào
-}
+// function thucHienPhepTinh(a, b, callback) {
+//     let ketQua = a + b;
+//     callback(ketQua); // Gọi callback function và truyền kết quả vào
+// }
 
-function hienThiKetQua(result){
-    console.log("kết quả là ", result);
+// function hienThiKetQua(result){
+//     console.log("kết quả là ", result);
     
-}
+// }
 
-tinhDienTichHCN(3,5, hienThiKetQua);
-thucHienPhepTinh(5, 3, hienThiKetQua); // Kết quả là: 8
+// tinhDienTichHCN(3,5, hienThiKetQua);
+// thucHienPhepTinh(5, 3, hienThiKetQua); // Kết quả là: 8
 
+const xuLyMang = (mang, callback) => {
+    mang.forEach(callback);
+  };
+  
+  // a. In từng phần tử
+  const inPhanTu = (phanTu) => console.log(phanTu);
+  xuLyMang([1, 2, 3, 4, 5], inPhanTu);
+  
+  // b. Nhân đôi
+  const nhanDoiPhanTu = (phanTu) => console.log(phanTu * 2);
+  xuLyMang([1, 2, 3, 4, 5], nhanDoiPhanTu);
+  
+  // c. Kiểm tra chẵn lẻ
+  const kiemTraChanLe = (phanTu) => {
+    const loai = phanTu % 2 === 0 ? "chẵn" : "lẻ";
+    console.log(`Số ${phanTu} là số ${loai}`);
+  };
+  xuLyMang([1, 2, 3, 4, 5], kiemTraChanLe);
+  
