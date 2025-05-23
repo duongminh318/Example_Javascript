@@ -1,40 +1,54 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+
+   
     <title>Ứng Dụng To-Do List</title>
     <style>
         .completed {
             text-decoration: line-through;
             color: gray;
         }
+
         li {
             cursor: pointer;
             padding: 5px;
             border-bottom: 1px solid #eee;
         }
+
         .input-area {
             margin: 10px 0;
         }
+
         #new-task-input {
             padding: 5px;
             width: 200px;
         }
+
         #add-task-button {
             padding: 5px 10px;
             cursor: pointer;
         }
     </style>
 </head>
+
 <body>
     <h1>Danh Sách Công Việc</h1>
 
+    <!-- Vùng nhập công việc -->
     <div class="input-area">
         <input type="text" id="new-task-input" placeholder="Nhập công việc mới">
         <button id="add-task-button">Thêm</button>
     </div>
 
+    <!-- Danh sách công việc -->
     <ul id="task-list"></ul>
 
+    <!-- Gắn file chính khởi động ứng dụng -->
     <script type="module" src="app.js"></script>
 </body>
+
 </html>
