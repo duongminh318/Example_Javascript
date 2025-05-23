@@ -5,6 +5,81 @@ todo-app/
 └── task-item.js      // Module đại diện cho một công việc cụ thể
 
 
+---
+
+## 📦 Mô-đun
+
+### 1. `TaskItem` - task-item.js
+
+Đại diện cho một công việc.
+
+- Thuộc tính:
+  - `name`: tên công việc
+  - `isCompleted`: trạng thái hoàn thành (true/false)
+
+- Phương thức:
+  - `render()`: tạo HTML dạng `<li>` để hiển thị công việc
+  - Click vào công việc sẽ toggle trạng thái hoàn thành, và cập nhật giao diện (gạch ngang nếu hoàn thành)
+
+---
+
+### 2. `TaskList` - task-list.js
+
+Quản lý danh sách nhiều công việc.
+
+- Phương thức:
+  - `addTask(name)`: thêm công việc mới
+  - `renderTasks()`: hiển thị toàn bộ danh sách công việc
+
+---
+
+### 3. `index.html`
+
+Giao diện trang web bao gồm:
+
+- Ô nhập nội dung công việc
+- Nút "Thêm"
+- Danh sách công việc hiển thị bên dưới
+- Một chút CSS giúp hiển thị đẹp hơn (ví dụ: gạch ngang khi hoàn thành)
+
+---
+
+### 4. `app.js`
+
+Điều phối hoạt động của toàn bộ ứng dụng.
+
+- Tạo đối tượng `TaskList`
+- Khi trang load, gọi `renderTasks()` để hiển thị (lúc đầu rỗng)
+- Khi người dùng:
+  - Nhấn "Thêm": 
+    - Lấy dữ liệu từ ô nhập
+    - Nếu rỗng → báo lỗi
+    - Nếu có nội dung → thêm vào danh sách và cập nhật giao diện
+    - Xóa nội dung ô nhập sau khi thêm
+
+---
+
+## ✅ Kiểm Thử
+
+- Nhập vài công việc → nhấn "Thêm" → phải hiển thị đúng
+- Click vào công việc → gạch ngang để đánh dấu hoàn thành
+- Nhập chuỗi rỗng → báo lỗi không hợp lệ
+
+---
+
+## 📌 Tổng Kết
+
+| File           | Vai Trò                                      |
+| -------------- | -------------------------------------------- |
+| `task-item.js` | Tạo ra 1 công việc đơn                       |
+| `task-list.js` | Quản lý và hiển thị nhiều công việc          |
+| `index.html`   | Giao diện người dùng                         |
+| `app.js`       | Kết nối mọi phần, xử lý hành động người dùng |
+
+---
+
+> Một ứng dụng nhỏ, dễ hiểu để rèn luyện JavaScript hướng đối tượng và tổ chức mã theo mô-đun.
+
 
 
 # Tham chiếu `this` trong JavaScript
