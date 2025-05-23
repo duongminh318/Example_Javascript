@@ -42,6 +42,15 @@
 // team.splice(1, 2,"Thắng");
 // console.log(team);
 
+//array.splice(startIndex, deleteCount, item1, item2, ...)
+let arr = [1, 2, 4];        // Mảng ban đầu, thiếu số 3
+
+// Sử dụng splice để thêm số 3 vào vị trí index 2
+// Cú pháp: arr.splice(vị_trí_chèn, số_lượng_xoá, phần_tử_cần_thêm)
+arr.splice(2, 0, 3);         // Tại index 2, không xoá gì, thêm số 3
+
+console.log(arr);           // In ra: [1, 2, 3, 4]
+
 
 // const students = ["Huy", "Lan", "Linh"];
 // students.forEach((student, index) => {
@@ -97,7 +106,7 @@
 // const top3= topStudents.slice(0);
 // console.log(top3);
 
-const numbers = [1, 2, 3, 4, 5];
+//const numbers = [1, 2, 3, 4, 5];
 // console.log(numbers[-1]);
 // // Trích xuất từ index 1 đến (nhưng không bao gồm) index 3
 // const subArray1 = numbers.slice(1, 3);
@@ -112,6 +121,10 @@ const numbers = [1, 2, 3, 4, 5];
 
 // const copyArray = numbers.slice();
 // console.log(copyArray); // Output: [1, 2, 3, 4, 5]
+
+
+
+
 
 
 

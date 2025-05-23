@@ -1,6 +1,7 @@
+
 //import tenTuyY from 'duong-dan-module';
 
-import sayHello,  { AUTHOR_NAME, getCurrentYear } from './moduleA.js'
+import sayHello,  { AUTHOR_NAME, getCurrentYear } from '../moduleA.js'
 
 console.log(sayHello("Ngọc"));
 
