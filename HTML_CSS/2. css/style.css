@@ -1,0 +1,288 @@
+ /* body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        color: #333;
+        padding: 40px;
+    }
+
+    h1 {
+        color: #007acc;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+    }
+
+    a {
+        color: #007acc;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    } */
+
+
+ /* selector {
+  property: value;
+} */
+
+ /* - p là selector (chọn tất cả các thẻ <p>)
+- bên trong dấu ngoặc nhọn {} là khối khai báo (declaration block)
+- color và font-size là các property
+- #333 và 16px là các value
+- Mỗi khai báo kết thúc bằng dấu chấm phẩy (;)
+*/
+
+
+ /* theo tên thẻ */
+ /* p {
+  color: #fd0606;
+  font-size: 26px;
+} */
+
+
+ /* Tất cả các thẻ <h2> sẽ có chữ màu cam và kích thước 28px */
+ /* h2 {
+  color: orange;
+  font-size: 28px;
+}
+h1{
+    color: #fd0606;
+} */
+
+ /* theo class */
+
+ /* Bất kỳ phần tử nào có class="highlight-text" sẽ có nền vàng và chữ in đậm */
+ /*  
+ .highlight-text {
+     background-color: yellow;
+     font-weight: bold;
+ } */
+ /* 
+ #main-header {
+     background-color: aqua;
+     color: indigo;
+     padding: 20px;
+ } */
+
+
+ #header {
+     /* Chọn phần tử có id="header" */
+     /* background-color: #f0f0f0;
+     padding: 20px; */
+ }
+
+ #submit-button {
+     /* Chọn phần tử có id="submit-button" */
+     /* background-color: green;
+     color: white;
+     border: none;
+     padding: 10px 20px; */
+ }
+
+ input[type="text"] {
+     /* Chọn tất cả <input> có type="text" */
+     /* border: 1px solid red;
+    padding: 5px; */
+ }
+
+ h1,
+ h2,
+ h3 {
+     /* Chọn cả <h1>, <h2>, và <h3> */
+     /* font-family: "Times New Roman", serif;
+ color: #003366; */
+ }
+
+ .warning,
+ .error,
+ .notice {
+     /* padding: 10px;
+    border: 1px dotted blue; */
+ }
+
+
+ h2 {
+     /*  font-weight: bold;
+      color: rgb(214, 67, 13);  Màu xanh đậm */
+ }
+
+ .important-text {
+     /* font-weight: 700;
+     line-height: normal;
+      Tương đương 'bold' */
+ }
+
+ /* 
+ .light-text {
+     font-weight: lighter;
+ } */
+ /* 
+ .box {
+     width: 45%;
+     padding: 15px;
+     border: 2px solid #ccc;
+     border-radius: 8px;
+     background-color: #f9f9f9;
+ }
+
+ .serif {
+     font-family: "Times New Roman", Georgia, serif;
+ }
+
+ .sans-serif {
+     font-family: Arial, Helvetica, sans-serif;
+ }
+
+ h2 {
+     margin-top: 0;
+     font-size: 28px;
+     color: #005a9c;
+ } */
+
+ /* .container p{
+    color: green;
+ } */
+
+ /* .container > p {
+    font-weight: bold;
+ } */
+
+ /* h1 +p {
+    text-decoration: underline;
+} */
+
+ .container div p {
+     /* Chọn tất cả <p> bên trong <div> bên trong .container */
+     /* font-style: italic; */
+ }
+
+ #main-nav>li>a:hover {
+     /* color: red; */
+ }
+
+ .my-button:hover {
+     /* background-color: blue; */
+ }
+
+
+ .my-button:active {
+     /* background-color: #ff0000; */
+     /* Active: đỏ đậm nhất */
+ }
+
+ .my-input:focus {
+     /* border-color: #007bff;
+     outline: none;
+     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
+ }
+
+ /* Link và link chưa truy cập */
+ a.my-link:link {
+     /* color: #007bff;
+     text-decoration: none; */
+ }
+
+ a.my-link:visited {
+     /* color: purple; */
+ }
+
+ .simple-box {
+     /* Viền dày 1px, liền nét, màu xám */
+     /* border: 1px solid #cccccc;
+     padding: 20px; */
+ }
+
+ /* 
+ .dashed-box {
+     border-width: 2px;
+     border-style: dashed;
+     border-color: red;
+     padding: 20px;
+ }
+
+ .top-border-box {
+     border-top: 4px double blue;
+     border-left: 4px double blue;
+     padding: 20px;
+ } */
+
+
+ .highlight-box {
+     background-color: yellow;
+     /* Tên màu */
+     padding: 20px;
+     margin-bottom: 20px;
+ }
+
+ #header {
+     background-color: #f0f0f0;
+     /* Mã Hex: màu xám nhạt */
+     padding: 20px;
+     margin-bottom: 20px;
+ }
+
+ .transparent-bg {
+     background-color: rgba(188, 9, 9, 0.7);
+     /* RGBA: nền trắng trong suốt */
+     padding: 20px;
+     margin-bottom: 20px;
+     border: 1px solid #ccc;
+ }
+
+
+ form-container {
+     width: 400px;
+     margin: 50px auto;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     font-family: Arial, sans-serif;
+     background-color: #f9f9f9;
+ }
+
+ .form-title {
+     text-align: center;
+     margin-bottom: 20px;
+     color: #333;
+ }
+
+ .form-group {
+     margin-bottom: 15px;
+ }
+
+ label {
+     display: block;
+     /* Hiển thị label thành khối, xuống dòng */
+     margin-bottom: 5px;
+     font-weight: bold;
+ }
+
+ input[type="text"],
+ input[type="password"] {
+     width: 100%;
+     padding: 10px;
+     border: 1px solid #ddd;
+     border-radius: 3px;
+     box-sizing: border-box;
+     /* Tính padding và border vào width */
+ }
+
+ .submit-button {
+     background-color: #007bff;
+     color: white;
+     border: none;
+     padding: 12px 20px;
+     border-radius: 3px;
+     cursor: pointer;
+     font-size: 16px;
+ }
+
+ .submit-button:hover {
+     background-color: #0056b3;
+ }
