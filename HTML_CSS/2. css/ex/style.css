@@ -1,0 +1,171 @@
+/*
+ * File: contact.css
+ * Mục đích: Định dạng cho trang Form Liên Hệ theo các yêu cầu của bài tập.
+ */
+
+/* ==========================================================================
+   1. ĐỊNH DẠNG KHUNG CHỨA CHÍNH
+   ========================================================================== */
+
+/*
+ * [Mục tiêu]: Định dạng cho khối div chính bao quanh form. 
+ * [Giải thích]: Sử dụng class selector (.contact-container) để áp dụng các style nền tảng.
+ * Các thuộc tính như 'color' và 'font-family' sẽ được các phần tử con bên trong kế thừa.
+ */
+.contact-container {
+  /* Chiều rộng của form được đặt là 400px.  */
+  width: 400px;
+  /* Màu chữ mặc định cho toàn bộ form là màu xám đậm (#333333).  */
+  color: #333333;
+  /* Phông chữ mặc định là Arial; nếu không có, trình duyệt sẽ dùng một phông sans-serif thay thế.  */
+  font-family: "Arial", sans-serif;
+}
+
+/* ==========================================================================
+   2. ĐỊNH DẠNG TIÊU ĐỀ VÀ CÁC NHÃN (LABEL)
+   ========================================================================== */
+
+/*
+ * [Mục tiêu]: Định dạng cho tiêu đề h1 với class 'title'. 
+ * [KIỂM TRA ƯU TIÊN]: Quy tắc 'color' dưới đây sẽ bị GHI ĐÈ bởi quy tắc Inline CSS
+ * (style="color: red;") trong file HTML.  Đây là ví dụ về độ ưu tiên: Inline > External/Internal.
+ * Tuy nhiên, 'font-style: italic' từ Internal CSS vẫn được áp dụng vì không bị ghi đè. 
+ */
+.title {
+  /* Kích thước chữ là 32px.  */
+  font-size: 32px;
+  /* In đậm tiêu đề.  */
+  font-weight: bold;
+  /* Sử dụng phông chữ "Georgia".  */
+  font-family: "Georgia", serif;
+  /* Màu chữ được yêu cầu là #2F4FAE, nhưng sẽ bị ghi đè.  */
+  color: #2F4F4F;
+  /* Khoảng cách dòng là 1.5 lần kích thước chữ.  */
+  line-height: 1.5;
+}
+
+/* [Mục tiêu]: Định dạng chung cho tất cả các thẻ <label>.  */
+label {
+  color: #555555;
+  font-family: "Arial", sans-serif;
+}
+
+/*
+ * [Mục tiêu]: Định dạng cho các label nằm BÊN TRONG một div. 
+ * [Giải thích]: Đây là bộ chọn hậu duệ (descendant selector).
+ */
+div label {
+  font-size: 14px;
+}
+
+/*
+ * [Mục tiêu]: Định dạng cho các label là CON TRỰC TIẾP của một div. 
+ * [Giải thích]: Đây là bộ chọn con (child selector).
+ */
+div > label {
+  font-weight: bold;
+}
+
+/*
+ * [Mục tiêu]: Định dạng cho label nằm NGAY SAU thẻ h1. 
+ * [Giải thích]: Đây là bộ chọn anh em liền kề (adjacent sibling selector).
+ * Trong trường hợp này, nó sẽ áp dụng cho nhãn "Họ và tên:".
+ */
+h1 + label {
+  font-style: italic;
+}
+
+
+/* ==========================================================================
+   3. ĐỊNH DẠNG CÁC Ô NHẬP LIỆU VÀ KIỂM TRA ƯU TIÊN
+   ========================================================================== */
+
+/*
+ * [Mục tiêu]: Thêm một quy tắc chung cho thẻ <input> để kiểm tra độ ưu tiên. 
+ * [KIỂM TRA ƯU TIÊN]: Quy tắc này (dùng tag selector) có độ ưu tiên THẤP HƠN
+ * quy tắc của class selector (.contact-input). Do đó, viền của các ô input
+ * sẽ là '1px solid #808080' từ lớp .contact-input thay vì viền đen này.
+ */
+input {
+  border: 1px solid black;
+}
+
+/*
+ * [Mục tiêu]: Định dạng riêng cho ô nhập email. 
+ * [Giải thích]: Sử dụng bộ chọn thuộc tính (attribute selector) để chỉ nhắm đến
+ * phần tử input có thuộc tính type="email".
+ */
+input[type="email"] {
+  background-color: rgba(220, 220, 255, 0.5); /* Nền màu xanh nhạt, hơi trong suốt.  */
+}
+
+/*
+ * [Mục tiêu]: Định dạng chung cho tất cả các ô nhập liệu và ô tin nhắn có class 'contact-input'.
+ * [Giải thích]: Dùng chung một class giúp định dạng đồng bộ và dễ bảo trì.
+ */
+.contact-input {
+  width: 100%;
+  border: 1px solid #808080;
+  background-color: rgba(240, 240, 240, 0.7);
+  font-family: "Helvetica", sans-serif;
+}
+
+/*
+ * [Mục tiêu]: Thay đổi viền khi người dùng nhấp vào ô nhập liệu.
+ * [Giải thích]: Sử dụng pseudo-class ':focus' để tạo hiệu ứng tương tác.
+ */
+.contact-input:focus {
+  border-color: blue;
+}
+
+/*
+ * [Mục tiêu]: Định dạng riêng cho ô tin nhắn (textarea).
+ * [KIỂM TRA ƯU TIÊN]: Thẻ textarea có cả class '.contact-input' và ID '#message'.
+ * Cả hai quy tắc đều có thuộc tính 'border'. Tuy nhiên, quy tắc của ID selector (#message)
+ * có độ ưu tiên CAO HƠN class selector (.contact-input). Do đó, viền của textarea
+ * sẽ là '2px dashed #808080'. 
+ */
+#message {
+  height: 100px;
+  border: 2px dashed #808080;
+}
+
+/* ==========================================================================
+   4. ĐỊNH DẠNG NÚT BẤM VÀ BỘ CHỌN NHÓM
+   ========================================================================== */
+
+/*
+ * [Mục tiêu]: Định dạng giao diện mặc định cho nút gửi tin nhắn.
+ * [Giải thích]: Sử dụng ID selector để định dạng một phần tử duy nhất.
+ */
+#submit-btn {
+  background-color: rgb(0, 150, 0); /* Nền màu xanh lá cây. */
+  color: white; /* Chữ màu trắng. */
+  border: none; /* Bỏ viền. */
+  font-family: "Arial", sans-serif; /* Ghi đè font kế thừa từ .contact-container. */
+}
+
+/*
+ * [Mục tiêu]: Áp dụng chung một cỡ chữ cho tất cả các ô nhập liệu và nút bấm. 
+ * [Giải thích]: Sử dụng bộ chọn nhóm (grouping selector) với dấu phẩy (,)
+ * để áp dụng cùng một quy tắc cho nhiều bộ chọn khác nhau, giúp code ngắn gọn hơn.
+ */
+.contact-input, #submit-btn {
+  font-size: 16px;
+}
+
+/*
+ * [Mục tiêu]: Thay đổi nền của nút khi người dùng di chuột qua.
+ * [Giải thích]: Sử dụng pseudo-class ':hover'.
+ */
+#submit-btn:hover {
+  background-color: rgba(0, 120, 0, 0.8);
+}
+
+/*
+ * [Mục tiêu]: Thay đổi nền của nút khi người dùng nhấn và giữ chuột.
+ * [Giải thích]: Sử dụng pseudo-class ':active'.
+ */
+#submit-btn:active {
+  background-color: darkgreen;
+}
