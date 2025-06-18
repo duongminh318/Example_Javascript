@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* Chuẩn hóa box-sizing */
+            margin: 0;
+            /* Reset margin về 0 */
+            padding: 0;
+            /* Reset padding về 0 */
+        }
+
+        /* Dành cho các thuộc tính có thể kế thừa */
+        body {
+            font-family: Arial, sans-serif;
+            /* Set default font for body */
+            line-height: 1.5;
+            /* Set default line-height for body */
+        }
+
+        .parent {
+            font-size: 20px;
+            width: 400px;
+            background-color: #e3f2fd;
+            border: 1px solid #90caf9;
+            padding: 10px;
+            margin-bottom: 20px;
+
+        }
+
+
+        .child-percent {
+            width: 50%;
+            /* 50% của 400px = 200px  */
+            background-color: #bbdefb;
+            padding: 5px;
+        }
+
+
+        .child-em {
+            font-size: 1.5em;
+            /* 1.5 * 20px = 30px  */
+        }
+
+        .rem-example {
+            font-size: 2rem;
+            /* 2 * 16px (font-size gốc) = 32px  */
+        }
+
+        .viewport-unit {
+            width: 80vw;
+            /* 80% chiều rộng của cửa sổ trình duyệt  */
+            height: 20vh;
+            /* 20% chiều cao của cửa sổ trình duyệt  */
+            background-color: #c8e6c9;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        Parent Element (font-size: 20px)
+        <div class="child-percent">Child (width: 50%)</div>
+        <div class="child-em">Child (font-size: 1.5em)</div>
+    </div>
+
+    <div class="rem-example">
+        Root Element Based (font-size: 2rem)
+    </div>
+    <div class="viewport-unit">
+        Viewport Unit Box (80vw, 20vh)
+    </div>
+</body>
+
+</html>

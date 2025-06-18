@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+
+    <style>
+
+ * {
+            box-sizing: border-box;
+            /* Chuẩn hóa box-sizing */
+            margin: 0;
+            /* Reset margin về 0 */
+            padding: 0;
+            /* Reset padding về 0 */
+        }
+
+        /* Dành cho các thuộc tính có thể kế thừa */
+        body {
+            font-family: Arial, sans-serif;
+            /* Set default font for body */
+            line-height: 1.5;
+            /* Set default line-height for body */
+        }
+
+
+
+        .box {
+            /* width: 300px;
+            height: 150px;
+            background-color: lightblue; */
+            /* phần đệm */
+            /* padding: 20px 10px; */
+
+            /* đường viền */
+            /* border: 10px solid blue; */
+
+            /* Lề (Margin) */
+            /* margin: 30px; */
+            /* Thêm 30px lề ở cả 4 cạnh để tạo khoảng cách với các phần tử khác  */
+
+        }
+
+        .padding-examples {
+            width: 200px;
+            height: 100px;
+            background-color: #ec3131;
+            border: 2px solid rgb(128, 128, 128);
+            margin-bottom: 20px;
+            /* border-radius: 5px; */
+            /* Để các ví dụ không dính vào nhau */
+        }
+
+        .padding-1 {
+            padding: 20px;
+        }
+
+
+        .padding-2 {
+            padding: 20px 40px;
+        }
+
+
+        /* 3. Ba giá trị: trên, trái/phải, dưới  */
+        .padding-3 {
+            padding: 20px 40px 30px;
+        }
+
+
+        /* 4. Bốn giá trị: trên, phải, dưới, trái (theo chiều kim đồng hồ)  */
+        .padding-4 {
+            padding: 20px 40px 30px 10px;
+        }
+
+        .border-example {
+            width: 250px;
+            height: 250px;
+            background-color: rgb(50, 196, 148);
+            margin-bottom: 20px;
+        }
+
+        .simple-border {
+            border: 5px solid red;
+        }
+
+        .dashed-border {
+            border: 5px dashed rgb(17, 187, 127);
+        }
+
+        .dotted-border {
+            border: 10px dotted rgb(234, 106, 106);
+        }
+
+        .double-border {
+            border: 5px double red;
+        }
+
+        .mixed-border {
+            border-style: solid dashed double dotted;
+            border-width: 5px 10px 8px 3px;
+            border-color: blue yellow violet gray;
+        }
+
+        .radius-example {
+            width: 250px;
+            height: 250px;
+            background-color: rgb(50, 196, 148);
+            /* display: inline-block; */
+            border: 4px solid #c62828;
+            margin-bottom: 20px;
+
+        }
+
+        .radius-1 {
+            border-radius: 30px;
+
+        }
+
+        .radius-2 {
+            border-radius: 30px 60px;
+            margin: 50px;
+        }
+
+        /* Bốn giá trị: trên-trái, trên-phải, dưới-phải, dưới-trái  */
+        .radius-4 {
+            border-radius: 10px 30px 50px 70px;
+            margin: 20px 40px 30px;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+    <!-- <div class="box">
+        đây là nội dung của hộp
+    </div> -->
+
+    <!-- 
+    <div class="padding-examples padding-1">Padding: 20px;</div>
+    <div class="padding-examples padding-2">Padding: 20px 40px;</div>
+    <div class="padding-examples padding-3">Padding: 20px 40px 30px;</div>
+    <div class="padding-examples padding-4">Padding: 20px 40px 30px 10px;</div> -->
+
+    <!-- <div class="border-example simple-border">border đơn giản</div>
+    <div class="border-example dashed-border">viền nét đứt</div>
+    <div class="border-example dotted-border">viền chấm</div>
+    <div class="border-example double-border">viền đôi</div>
+    <div class="border-example mixed-border">viền hỗn hợp</div> -->
+    <!-- <div class="border-example">viền hỗn hợp</div> -->
+
+
+    <!-- <div class="radius-example radius-1"></div>
+    <div class="radius-example radius-2"></div>
+    <div class="radius-example radius-4"></div>
+    <div class="radius-example circle"></div> -->
+
+    
+
+
+</body>
+
+</html>

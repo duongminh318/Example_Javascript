@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập ví dụ</title>
+    <style>
+        /* Các thuộc tính CSS không thể kế thừa sẽ đặt tại Universal Selector */
+     
+        * {
+            box-sizing: border-box;
+            /* Chuẩn hóa box-sizing */
+            margin: 0;
+            /* Reset margin về 0 */
+            padding: 0;
+            /* Reset padding về 0 */
+        }
+
+        /* Dành cho các thuộc tính có thể kế thừa */
+        body {
+            font-family: Arial, sans-serif;
+            /* Set default font for body */
+            line-height: 1.5;
+            /* Set default line-height for body */
+        }
+
+
+
+        
+
+        .box {
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            background-color: red;
+        }
+
+        .box1 {
+            border: 10px solid rgb(34, 255, 0);
+
+
+        }
+
+        .box2 {
+            border: 20px solid blue;
+            margin-left: 159px;
+        }
+
+        .box3 {
+            border: 20px solid rgb(196, 123, 14);
+            margin-left: 339px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1"></div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-sizing-example {
+            width: 200px;
+            height: 100px;
+            padding: 20px;
+            border: 10px solid #d32f2f;
+            background-color: #ef9a9a;
+            margin-bottom: 20px;
+        }
+
+        .content-box {
+            box-sizing: content-box;
+            /* Tổng rộng = 200px (width) + 40px (padding) + 20px (border) = 260px */
+
+        }
+
+        .border-box {
+            box-sizing: border-box;
+               /* Tổng rộng = 200px (width đã bao gồm padding và border) */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box-sizing-example content-box">
+        box-sizing: content-box;
+    </div>
+    <div class="box-sizing-example border-box">
+        box-sizing: border-box;
+    </div>
+
+</body>
+
+</html>

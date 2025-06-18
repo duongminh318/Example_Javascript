@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max width/ max height</title>
+    <style>
+        .fixed-box {
+            width: 500px;
+            height: 300px;
+            background-color: #e1bee7;
+            margin-bottom: 20px;
+        }
+
+        .responsive-box {
+            max-width: 500px;
+            max-height: 700px;
+            background-color: #b3e5fc;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+
+        img {
+            max-width: 100%;
+            height: 100%;
+        }
+
+        button {
+            min-width: 100px;
+            /* Nút luôn rộng ít nhất 100px */
+            min-height: 40px;
+            /* Nút luôn cao ít nhất 40px */
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .min-height-box {
+            min-height: 150px;
+            /* Hộp luôn cao ít nhất 150px */
+            background-color: lightblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    <div class="fixed-box">
+        Hộp cố định: Luôn rộng 500px, cao 300px
+    </div>
+
+    <div class="responsive-box">
+        rộng nhất là 500px, nếu màn bé hơn nó sẽ co lại
+        Hộp linh hoạt: Co lại nếu màn hình nhỏ hơn 500px
+    </div>
+
+    <div class="responsive-box">
+        <img src="https://i.pinimg.com/564x/94/2d/58/942d58410471e527f4e5749b6aa34cba.jpg" alt="Ảnh minh họa">
+        <p>Ảnh có <code>max-width: 100%</code>, tự co nếu container nhỏ hơn.</p>
+    </div> -->
+
+    <button>dcccccc</button>
+
+    <div class="min-height-box">
+        Đây là hộp có <code>min-height: 150px</code>.
+        Nếu nội dung ít thì vẫn giữ độ cao tối thiểu này.
+    </div>
+
+
+</body>
+
+</html>

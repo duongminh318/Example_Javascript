@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            /* Chuẩn hóa box-sizing */
+            margin: 0;
+            /* Reset margin về 0 */
+            padding: 0;
+            /* Reset padding về 0 */
+        }
+
+        /* Dành cho các thuộc tính có thể kế thừa */
+        body {
+            font-family: Arial, sans-serif;
+            /* Set default font for body */
+            line-height: 1.5;
+            /* Set default line-height for body */
+        }
+
+        .block-el{
+            display: block;
+            background-color: lightgreen;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="block-el">Đây là phần tử block.</div>
+
+    <p>Đây là một đoạn văn (block) với <span class="inline-el">phần tử inline</span> bên trong. <span
+            class="inline-el">Một inline khác.</span></p>
+
+    <div class="inline-block-el">Inline-block 1</div>
+    <div class="inline-block-el">Inline-block 2</div>
+
+    <div class="hidden-el">Bạn không thể thấy tôi.</div>
+</body>
+
+</html>
