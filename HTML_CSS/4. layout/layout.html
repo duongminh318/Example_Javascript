@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        body {
+            margin-top: 60px;
+            /* Đẩy nội dung xuống để không bị menu che */
+        }
+
+        .menu-fixed {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: blue;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            opacity: 0.7;
+        }
+
+        .muc-luc::before {
+            content: '👉 thêm cái gì đó vào trước  ';
+            ;
+        }
+
+        .tieu-de::after {
+            content: '';
+            /* Để rỗng vì chỉ cần tạo hình */
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: #4a90e2;
+            margin-top: 5px;
+        }
+
+        .tieu-de::before {
+            content: '✅';
+
+
+        }
+
+        .hop-co-bong {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 68px 71px 73px 26px rgba(0, 0, 0, 0.75);
+
+        }
+
+        .tieu-de-co-bong {
+            text-shadow: 16px 16px 6px rgba(216, 40, 40, 0.38);
+        }
+
+
+
+        .khung-overflow {
+            height: 50px;
+            border: 1px solid #ccc;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        .cat-bo {
+            overflow: hidden;
+        }
+
+        .luon-cuon {
+            overflow-x: scroll;
+            overflow-y: auto;
+
+        }
+
+        .tu-dong {
+            overflow: auto;
+        }
+
+        .note {
+            height: 50px;
+            overflow: scroll;
+        }
+
+        .khung-anh {
+            width: 120px;
+            height: 120px;
+            border: 2px solid #d52121;
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .khung-anh img {
+            width: 80%;
+            height: 100%;
+        }
+
+        .anh-cover {
+            object-fit: cover;
+        }
+
+        .anh-contain {
+            object-fit: none;
+        }
+
+        .san-khau {
+            position: relative;
+            height: 150px;
+        }
+
+        .san-khau div {
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            padding: 10px;
+            color: rgb(175, 70, 70);
+        }
+
+        .lop-1 {
+            background: #e57373;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .lop-2 {
+            background: #4a90e2;
+            top: -1;
+            left: 0;
+            z-index: 2;
+        }
+
+        /* z-index cao nhất, nằm trên cùng */
+        .lop-3 {
+            background: #f9a825;
+            top: 40px;
+            left: 40px;
+            z-index: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="menu-fixed">Tôi là menu cố định</div>
+    <div style="height: 500px; background: #f5f5f5;">
+        <p style="padding: 10px;">Hãy cuộn trang này xuống...</p>
+    </div>
+
+
+    <button id="backToTop">↑ Top</button> -->
+
+    <!-- <p class="muc-luc">tiêu đề giới thiệu</p>
+
+    <h3 class="tieu-de">chương 1: bắt đầu</h3> -->
+
+
+    <!-- <h1 class="tieu-de-co-bong">Tiêu đề có bóng</h1>
+    <div class="hop-co-bong">Hộp có bóng</div> -->
+    <!-- <p>overflow: hidden (Cắt bỏ phần thừa)</p>
+    <div class="khung-overflow cat-bo">Nội dung rất dài...</div>
+
+    <p>overflow: scroll (Luôn có thanh cuộn)</p>
+    <div class="khung-overflow luon-cuon">
+        Nội dung rất dài...
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Incidunt earum vel quae autem expedita eligendi magni, quidem deserunt! Architecto recusandae laudantium quam, amet neque nam vitae est quis unde reiciendis!</p>
+    </div>
+
+    <p>overflow: auto (Chỉ cuộn khi cần)</p>
+    <div class="khung-overflow tu-dong">Nội dung rất dài...</div> -->
+
+    <!-- <h1 class="note">
+  Dòng 1
+ 
+</h1> -->
+
+    <!-- <div class="khung-anh">
+        <img class="anh-cover" src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/08/anh-con-meo-cute.jpg" alt="[Image of Ảnh cover]">
+        <p>cover</p>
+    </div>
+    <div class="khung-anh">
+        <img class="anh-contain" src="https://hoanghamobile.com/tin-tuc/wp-content/uploads/2024/08/anh-con-meo-cute.jpg" alt="[Image of Ảnh contain]">
+        <p>contain</p>
+    </div> -->
+
+
+    <div class="san-khau">
+        <div class="lop-1">Lớp 1 (z-index: 10)</div>
+        <div class="lop-2">Lớp 2 (z-index: 20)</div>
+        <div class="lop-3">Lớp 3 (z-index: 5)</div>
+    </div>
+</body>
+
+</html>

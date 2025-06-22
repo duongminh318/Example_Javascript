@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block-el {
+            display: block;
+            background-color: lightgreen;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .inline-el {
+            display: inline;
+            background-color: rgb(233, 233, 4);
+            padding: 5px;
+            /*padding-top/bottom không đẩy các phần tử khác ra  */
+            width: 400px;
+            /* Sẽ không có tác dụng  */
+            height: 50px;
+            /* Sẽ không có tác dụng*/
+            margin-left: 50px;
+            margin-top: 50px;
+        }
+
+
+        .inline-block-el {
+            display: inline-block;
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 5px;
+            width: 150px;
+            /*Có tác dụng */
+            height: 50px;
+             /* margin-top: 50px; */
+             margin: 40px;
+            /* Có tác dụng*/
+        }
+
+        .hidden-el{
+            display: none; /*Phần tử này sẽ không hiển thị và không chiếm không gian*/
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="block-el">Đây là phần tử block.</div>
+    <p>Đây là một đoạn văn (block) với <span class="inline-el">phần tử inline</span> bên trong. <span
+            class="inline-el">Một inline khác.</span></p>
+
+    <div class="inline-block-el">Inline-block 1</div>
+    <div class="inline-block-el">Inline-block 2</div>
+
+    <div class="hidden-el">Bạn không thể thấy tôi.</div>
+</body>
+
+</html>

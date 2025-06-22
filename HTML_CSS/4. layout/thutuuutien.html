@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thứ tự ưu tiên</title>
+    <style>
+        /* Selector element - điểm 1 */
+        p {
+            color: blue;
+            /* màu xanh */
+        }
+
+        /* Selector class - điểm 10 */
+        .highlight {
+            color: green;
+            /* màu xanh lá */
+        }
+
+        /* Selector ID - điểm 100 */
+        #special {
+            color: red;
+            /* màu đỏ */
+        }
+
+        /* Dùng !important để ưu tiên cao nhất */
+        .important {
+            color: orange !important;
+            /* màu cam, ghi đè tất cả */
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    - Element p (1 điểm): blue
+    - Class highlight (10 điểm): green
+    - ID special (100 điểm): red
+    - Inline style (1000 điểm): purple
+    - Class important với !important ghi đè tất cả
+
+    Màu chữ sẽ là cam vì !important ưu tiên hơn hết
+  -->
+
+    <p id="special" class="highlight important" style="color: purple;">
+        Đây là đoạn văn có nhiều selector, trong đó có !important.
+    </p>
+
+    <!-- Không có !important, id ghi đè class và element -->
+    <p id="special" class="highlight">
+        Đây là đoạn văn có ID và class, không có !important.
+    </p>
+
+    <!-- Chỉ có class và element -->
+    <p class="highlight">
+        Đây là đoạn văn có class và element.
+    </p>
+
+    <!-- Chỉ có element -->
+    <p>
+        Đây là đoạn văn bình thường, chỉ có style element.
+    </p>
+
+
+</body>
+
+</html>
