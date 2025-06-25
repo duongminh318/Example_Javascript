@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid box</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        .product-list {
+            display: grid;
+            border: 2px solid dodgerblue;
+            /* Để thấy rõ container */
+            padding: 10px;
+
+            grid-template-columns: 100px 100px 100px 100px 100px;
+            grid-template-rows: 120px 120px;
+            gap: 5px;
+            /* row-gap: 5px;
+            column-gap: 7px; */
+            justify-items: center;
+            /* justify-items: start; */
+            /* justify-items: stretch; */
+
+            height: 500px;
+            /* align-items: baseline; */
+
+            /* place-items: center center;
+
+            justify-content: space-between;
+            align-content: space-between; */
+
+            /* place-content: space-between space-between; */
+
+
+
+
+
+        }
+
+        .product-item {
+            background-color: lightcoral;
+            border: 1px solid crimson;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        /* Thêm màu sắc khác nhau để dễ phân biệt (tùy chọn) */
+        .item-1 {
+            background-color: #ef476f;
+            /* justify-self: start; */
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-column: 1/2;
+
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-row: 1/2;
+
+        }
+
+        .item-2 {
+            background-color: #ffd166;
+            /* align-self: end;
+            place-self: end start; */
+            /* grid-column: 2/ span 2 ;
+            
+            grid-row-start: 1;
+            grid-row-end: 2; */
+        }
+
+        .item-3 {
+            background-color: #06d6a0;
+        }
+
+        .item-4 {
+            background-color: #118ab2;
+
+            /* grid-column: 2 / span 2;
+            grid-row: 2 / span 2; */
+        }
+
+        .item-5 {
+            background-color: #073b4c;
+        }
+
+        .item-6 {
+            background-color: #ff8fab;
+            grid-column:-3/-1 ;
+
+            grid-row: -2/-1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Danh sách sản phẩm</h1>
+    <div class="product-list">
+        <div class="product-item item-1">Sản phẩm 1</div>
+        <div class="product-item item-2">Sản phẩm 2</div>
+        <div class="product-item item-3">Sản phẩm 3</div>
+        <div class="product-item item-4">Sản phẩm 4</div>
+        <div class="product-item item-5">Sản phẩm 5</div>
+        <div class="product-item item-6">Sản phẩm 6</div>
+    </div>
+</body>
+
+</html>
