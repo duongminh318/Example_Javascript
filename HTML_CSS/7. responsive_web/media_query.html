@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style>
+        .box {
+            height: 300px;
+            background-color: aqua;
+            color: rgb(255, 6, 6);
+            /* mặc định */
+
+        }
+
+        /* bình thường xanh, sẽ biến thành màu đỏ nếu width <600px */
+        /* @media screen and (max-width: 600px) {
+            .box {
+                background-color: rgb(213, 9, 9);
+            }
+        } */
+
+/*  */
+        /* @media screen and (min-width: 600px) {
+            .box {
+                background-color: rgb(213, 9, 9);
+            }
+        } */
+
+
+            /* Tablet: 481px – 1200px  - thành màu cam*/
+
+             @media screen and (min-width: 481px) and (max-width:1200px), print {
+            .box {
+                background-color: rgb(241, 84, 6);
+            }
+
+
+        } 
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p> Lúc đầu màu xanh</p>
+    </div>
+</body>
+
+</html>
